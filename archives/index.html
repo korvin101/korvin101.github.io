@@ -1,0 +1,546 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>iblogc</title>
+<link rel="shortcut icon" href="https://me.iblogc.com/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://me.iblogc.com/media/css/tailwind.css">
+<link rel="stylesheet" href="https://me.iblogc.com/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="iblogc - Atom Feed" href="https://me.iblogc.com/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54784650-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-54784650-1');
+  </script>
+    
+
+  <meta name="description" content="Just do it~" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+      <a href="https://xbtong.top/" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        小报童
+      </a>
+    
+      <a href="https://olb.iblogc.com" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        OLB
+      </a>
+    
+    <a href="https://me.iblogc.com/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+              <i class="ri-star-line text-orange-200 absolute left-0 ml-2 rotate-90"></i>
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/liuliangka/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                🌟 超值流量卡，享受无忧通信 🌟
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/jie-jue-npm-nuxt-3-xiang-mu-chu-shi-hua-bao-cuo-error-error-failed-to-download-template-from-registry/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                解决 NPM Nuxt 3 项目初始化报错 ERROR  Error: Failed to download template from registry
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/qi-niu-yun-wen-jian-mian-fei-shan-chu-jiao-ben/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                七牛云文件免费删除脚本
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/bu-jian-duan-kong-ge-c2-a0-non-breaking-space/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                 不间断空格 C2 A0 - Non-breaking space
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/Gitee2Gitea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                代码托管平台码云(Gitee)到 Gitea 迁移记
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/WebFlux中mongo操作-Transaction/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                WebFlux 中 mongo 操作-Transaction
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/WebFlux中mongo操作-Aggregation/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                WebFlux 中 mongo 操作-Aggregation
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/awesome-software/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                自用软件推荐
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/adoption-cat-Hua-Mulan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                (猫)花木兰领养注意事项
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/git-reset/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Git后悔药
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/git-alias/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Git常用命令别名设置
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/android真机调试常用命令/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Android真机调试常用命令
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/js笔记/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                JS笔记
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/SpringWebFlux/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                SpringWebFlux使用笔记
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/hello-gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Hello Gridea
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/使用alembic进行数据库版本管理/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                使用 alembic 进行数据库版本管理
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-rest-framework接口单元测试/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django REST framework 单元测试「Unit Testing」
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/在macos上更改jenkins默认用户解决权限问题/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                在 macOS 上更改 Jenkins 的默认用户，解决权限问题
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/内网穿透工具frp客户端自定义子域名访问配置/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                内网穿透工具 frp 客户端自定义子域名访问配置
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/mac远程连接windows/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                MacOS 远程连接 Windows
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-biao-dan-zi-ding-yi-yan-zheng/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django 表单自定义验证
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-rest-framework入门笔记及跳坑记录/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django Rest framework 入门笔记及跳坑记录
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-rest-framework使用问题及解决方法/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django Rest framework 使用问题及解决方法
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-rest-framework里的api请求频率控制/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django Rest framework 里的 API 请求频率控制
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/在centos7使用mysql-nginx-gunicorn+supervisor部署django/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                在 CentOS7 上用 MySQL+Nginx+Gunicorn+Supervisor 部署 Django
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/hang-dian-ji-yi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                杭电记忆---（献给母校-杭州电子工业学院）
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-18-shi-wu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django 1.8 事务
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/npm入门命令/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                npm 入门命令
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/chrome扩展-插件-应用推荐/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Chrome 扩展/插件/应用推荐
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-admin-bi-ji/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django admin 笔记
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django1-9文档阅读笔记/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django 1.9 文档阅读笔记
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-filter/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                django-filter
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-rest-framework之版本号version/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django REST framework 之版本号 version
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/curl常用命令/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                curl 常用命令
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django-guan-lian-dui-xiang-zi-duan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django 关联对象字段
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/duoshuo-comments-ua/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                多说评论 UA 显示测试
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django字段选项related-name和related-query-name/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django 字段选项 related_name 和 related_query_name
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/git-stash的简单运用/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Git stash 的简单运用
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/git-patch的简单运用/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Git patch 的简单运用
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/material-design资源/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Material Design 资源
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/git常用命令/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Git 常用命令
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/django内置的flatpages应用/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Django 内置的 flatpages 应用
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/使用synergy实现多台电脑共享一套键鼠/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                使用 Synergy 实现多台电脑共享一套键鼠
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/ubuntu从14-10升级到15-04/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                ubuntu 从 14.10 升级到 15.04
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/xy-problem/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                XY-Problem
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/python中的UUID/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                python 中的 UUID
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/Apache-Rewrite/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Apache Rewrite
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/chrome-add-to-homescreen/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                在 Android Chrome 以 app 形式打开网站
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/UC和QQ浏览器私有META/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                UC 和 QQ 浏览器私有 META
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://me.iblogc.com/post/ubuntu安装android-studio出现错unable-to-run-mksdcard-sdk-tool/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Ubuntu 安装 Android Studio 出现错 unable to run mksdcard sdk tool
+              </a>
+            </div>
+          </div>
+        
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+    
+      <a href="https://me.iblogc.com/archives/page/2" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  <!-- Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> && Deployed by <a href="https://app.netlify.com/sites/iblogc/deploys"><img src="https://api.netlify.com/api/v1/badges/54ffcfc8-016f-4735-9832-8050c4b2a68d/deploy-status" alt="部署状态" style="display: inline;"></a> -->
+<script defer src="https://hananalytics-8bv.pages.dev/tracker.min.js" data-website-id="me-blog"></script>
+</footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://me.iblogc.com/media/scripts/main.js"></script>
+</body>
+</html>
